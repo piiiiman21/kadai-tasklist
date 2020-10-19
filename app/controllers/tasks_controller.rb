@@ -16,7 +16,7 @@ class TasksController < ApplicationController
 
     if @task.save
       flash[:success] = 'Task が正常に追加されました'
-      redirect_to @message
+      redirect_to @task
     else
       flash.now[:danger] = 'Task が追加されませんでした'
       render :new
